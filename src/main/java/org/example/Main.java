@@ -20,6 +20,28 @@ public class Main {
         list.addAll(Arrays. asList(productOne, productTwo, productThree,
                 productFour, productFive, productSix, productSeven, productEight, productNine, productTen));
         Store store = new Store((ArrayList<Product>) list);
+        List<Product> laptop = new ArrayList<>();
+        Category categoryOne = new Category((ArrayList<Product>) laptop, "Laptop");
+        categoryOne.addProduct(productOne);
+        categoryOne.addProduct(productTwo);
+        categoryOne.addProduct(productThree);
+        System.out.println(categoryOne);
+        System.out.println("----------");
+        List<Product> tv = new ArrayList<>();
+        Category categoryTwo = new Category((ArrayList<Product>) tv, "TV");
+        categoryTwo.addProduct(productFour);
+        categoryTwo.addProduct(productFive);
+        categoryTwo.addProduct(productSix);
+        System.out.println(categoryTwo);
+        System.out.println("----------");
+        List<Product> telephone = new ArrayList<>();
+        Category categoryThree = new Category((ArrayList<Product>) telephone, "Telephone");
+        categoryThree.addProduct(productSeven);
+        categoryThree.addProduct(productEight);
+        categoryThree.addProduct(productNine);
+        categoryThree.addProduct(productTen);
+        System.out.println(categoryThree);
+        System.out.println("----------");
         System.out.println(store);
         User firstUser = new User("Vanya", "Vanya1", "fgh345");
         User secondUser = new User("Petya", "Petruha", "l6j4n8");

@@ -22,18 +22,29 @@ public class Category {
 
     /**
      * @apiNote Метод для добавления товара в категорию
-     * @param category категория
      * @param product товар
      * @return список товаров в категории
      */
-    public Category addProduct(Category category, Product product){
-        if(product.getProductName() == category.getNameCategory()){
+    public void addProduct(Product product){
+        if(product.getProductName() == getNameCategory()){
             category.add(product);
         }
-        return category;
+
     }
 
     private void add(Product product) {
         category.add(product);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Product product: category){
+            stringBuilder.append(product.getProductName());
+            stringBuilder.append(": ");
+            stringBuilder.append(product.toString());
+
+        }
+        return  stringBuilder.toString();
     }
 }
